@@ -19,15 +19,18 @@ class SignUpFlowFourViewController: BaseViewController {
     
     @IBAction func beginnerAction(_ sender: Any) {
         FirebaseHelper.setDataInBio(for: "experience", value: "beginner")
+        self.performSegue(withIdentifier: "showNextSegue3", sender: nil)
     }
     
     
     @IBAction func intermediateAction(_ sender: Any) {
         FirebaseHelper.setDataInBio(for: "experience", value: "intermediate")
+        self.performSegue(withIdentifier: "showNextSegue3", sender: nil)
     }
     
     @IBAction func expertAction(_ sender: Any) {
         FirebaseHelper.setDataInBio(for: "experience", value: "expert")
+        self.performSegue(withIdentifier: "showNextSegue3", sender: nil)
     }
     
     /*

@@ -151,6 +151,34 @@ class FirebaseHelper {
         }
     }
     
+    static func uploadUserProfile(image: UIImage, completionBlock: @escaping urlBlock) {
+        
+        guard let time = TimeFormatter.getCurrentLocalTimeStamp() else {
+            completionBlock(nil)
+            return
+        }
+        
+        let storageRef = Storage.storage().reference().child("user_profile/\(time).png")
+        
+        if let uploadData = image.pngData(){
+            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+                if error == nil {
+                    storageRef.downloadURL { (url, error) in
+                        guard let downloadURL = url else {
+                            
+                            completionBlock(nil)
+                            return
+                        }
+                        print(downloadURL.absoluteString)
+                        completionBlock(downloadURL)
+                    }
+                } else {
+                    completionBlock(nil)
+                }
+            }
+        }
+    }
+    
     static func uploadImageToStudio(image: UIImage, completionBlock: @escaping urlBlock) {
         
         guard let email = Auth.auth().currentUser?.email, let time = TimeFormatter.getCurrentLocalTimeStamp() else {

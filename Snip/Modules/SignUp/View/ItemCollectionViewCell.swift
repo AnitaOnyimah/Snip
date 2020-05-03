@@ -30,6 +30,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     }
 
     func setImageAndName(image: UIImage?, name: String) {
+        imageView.contentMode = .scaleAspectFill
         imageView.image = image
         label.text = name
     }

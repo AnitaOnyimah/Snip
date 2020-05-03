@@ -48,6 +48,8 @@ class ProfileViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
     func fetchProfileData() {
         
         guard let currentUser = Auth.auth().currentUser else { return }
@@ -65,7 +67,6 @@ class ProfileViewController: BaseViewController {
                 options: [
                     .processor(processor),
                     .scaleFactor(UIScreen.main.scale),
-                    .transition(.fade(1)),
                     .cacheOriginalImage
                 ])
             {
@@ -73,9 +74,9 @@ class ProfileViewController: BaseViewController {
                 switch result {
                     case .success(let value):
                         self.imageView.image = value.image
-                        self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2
+                        self.imageView.layer.cornerRadius = 48.0
                         self.imageView.layer.borderColor = UIColor(named: "color1")?.cgColor
-                        self.imageView.layer.borderWidth = 5
+                        self.imageView.layer.borderWidth = 3
                         self.imageView.layer.masksToBounds = true
                     case .failure(let error):
                         print("Job failed: \(error.localizedDescription)")
@@ -146,6 +147,34 @@ class ProfileViewController: BaseViewController {
     
     @IBAction func menuAction(_ sender: Any) {
         showSimpleActionSheet()
+    }
+    
+    @IBAction func profilePhotoAction(_ sender: Any) {
+        
+        let alert = UIAlertController.init(title: "", message: "Choose your option", preferredStyle: .actionSheet)
+        
+        let camera = UIAlertAction.init(title: "Capture From Camera", style: UIAlertAction.Style.default) { (action) in
+            
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = .camera
+            self.present(picker, animated: true, completion: nil)
+            
+        }
+        
+        let library = UIAlertAction.init(title: "Choose From Library", style: UIAlertAction.Style.default) { (action) in
+            
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true, completion: nil)
+            
+        }
+        
+        alert.addAction(camera)
+        alert.addAction(library)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func showSimpleActionSheet() {
@@ -325,5 +354,50 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
                     print("Job failed: \(error.localizedDescription)")
             }
         }
+    }
+}
+
+
+extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        picker.dismiss(animated: true, completion: {
+            if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                
+                self.imageView.image = pickedImage
+                
+                self.imageView.layer.cornerRadius = 48.0
+                self.imageView.layer.borderColor = UIColor(named: "color1")?.cgColor
+                self.imageView.layer.borderWidth = 3
+                self.imageView.layer.masksToBounds = true
+                
+                FirebaseHelper.uploadUserProfile(image: pickedImage) { (url) in
+                    
+                    let userun = Auth.auth().currentUser!
+                    
+                    let changeRequest = userun.createProfileChangeRequest()
+                    changeRequest.photoURL = url
+                    changeRequest.commitChanges { (error) in
+                        
+                    }
+                }
+            }
+        })
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+
+extension UIImage {
+    func autofixImageOrientation() -> UIImage {
+        UIGraphicsBeginImageContext(self.size)
+        self.draw(at: .zero)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage ?? self
     }
 }

@@ -182,10 +182,13 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="H4q-mM-XxX"/>
                                         </constraints>
-                                        <color key="tintColor" name="color1"/>
-                                        <state key="normal" image="filters">
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="camera" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23" scale="medium"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cameraAction:" destination="R07-CD-abk" eventType="touchUpInside" id="Xpp-9f-x5l"/>
+                                        </connections>
                                     </button>
                                     <searchBar contentMode="redraw" placeholder=" Enter a Hashtag or Location" translatesAutoresizingMaskIntoConstraints="NO" id="hye-8D-1F9">
                                         <rect key="frame" x="8" y="-1" width="352" height="56"/>
@@ -1215,6 +1218,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Post" style="done" id="Upt-BJ-35h">
                             <connections>
                                 <action selector="postAction:" destination="0WQ-mA-bf1" id="qkQ-pf-qkH"/>
+                                <segue destination="QX7-kK-And" kind="show" id="JNe-Hj-9GB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1233,6 +1237,60 @@
             </objects>
             <point key="canvasLocation" x="10240.579710144928" y="-86.383928571428569"/>
         </scene>
+        <!--Facts View Controller-->
+        <scene sceneID="y8b-Mn-aSM">
+            <objects>
+                <viewController id="QX7-kK-And" customClass="FactsViewController" customModule="Snip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mSc-OM-KUD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almost There !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shr-Np-NFe">
+                                <rect key="frame" x="119" y="208" width="176" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="EPc-Qu-cav"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissor" translatesAutoresizingMaskIntoConstraints="NO" id="7mU-fo-EOv">
+                                <rect key="frame" x="107" y="303" width="200" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="SHL-AO-Ccy"/>
+                                    <constraint firstAttribute="height" constant="170" id="ryk-4R-AGL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJq-7L-kJZ">
+                                <rect key="frame" x="40" y="543" width="334" height="69"/>
+                                <string key="text">Did you know:
+95% of discarded clothing can be recycled or upcycled.</string>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7mU-fo-EOv" firstAttribute="top" secondItem="shr-Np-NFe" secondAttribute="bottom" constant="60" id="CwQ-MA-MD6"/>
+                            <constraint firstItem="shr-Np-NFe" firstAttribute="top" secondItem="ap1-p6-ORj" secondAttribute="top" constant="120" id="FOx-CV-Cg5"/>
+                            <constraint firstItem="shr-Np-NFe" firstAttribute="centerX" secondItem="mSc-OM-KUD" secondAttribute="centerX" id="JaH-gN-gfY"/>
+                            <constraint firstItem="7mU-fo-EOv" firstAttribute="centerX" secondItem="mSc-OM-KUD" secondAttribute="centerX" id="L4J-Ih-FUu"/>
+                            <constraint firstItem="LJq-7L-kJZ" firstAttribute="leading" secondItem="ap1-p6-ORj" secondAttribute="leading" constant="40" id="Mjw-xK-p6C"/>
+                            <constraint firstItem="ap1-p6-ORj" firstAttribute="trailing" secondItem="LJq-7L-kJZ" secondAttribute="trailing" constant="40" id="OgV-TO-8dF"/>
+                            <constraint firstItem="LJq-7L-kJZ" firstAttribute="top" secondItem="7mU-fo-EOv" secondAttribute="bottom" constant="70" id="vjL-TR-PtI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ap1-p6-ORj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hN1-b0-jpp"/>
+                    <connections>
+                        <outlet property="factLabel" destination="LJq-7L-kJZ" id="Fd4-J8-40B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OdE-UN-l2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11049" y="-86"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="Vm8-K1-0k3">
             <objects>
@@ -1244,19 +1302,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-Z9-WIu">
                                 <rect key="frame" x="0.0" y="88" width="414" height="220"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oKT-El-LfW">
-                                        <rect key="frame" x="35" y="22.5" width="120" height="95"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oKT-El-LfW">
+                                        <rect key="frame" x="35" y="22.5" width="100" height="95"/>
                                         <color key="tintColor" name="color1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Jim-wC-PaU"/>
-                                            <constraint firstAttribute="width" constant="120" id="TW1-66-bDE"/>
+                                            <constraint firstAttribute="width" constant="100" id="TW1-66-bDE"/>
                                         </constraints>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="small" weight="ultraLight">
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         </preferredSymbolConfiguration>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amit Saha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oc-7t-gHH">
-                                        <rect key="frame" x="180" y="57" width="219" height="26.5"/>
+                                        <rect key="frame" x="160" y="57" width="239" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1336,6 +1394,16 @@
                                             <action selector="menuAction:" destination="Xes-iC-P2V" eventType="touchUpInside" id="EgR-ce-mdA"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qM-Yr-Bgy">
+                                        <rect key="frame" x="44" y="22" width="103" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="cbz-rH-8kY"/>
+                                            <constraint firstAttribute="height" constant="98" id="sKM-ie-5LZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="profilePhotoAction:" destination="Xes-iC-P2V" eventType="touchUpInside" id="Fgy-6l-P7E"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="color4"/>
                                 <constraints>
@@ -1345,6 +1413,7 @@
                                     <constraint firstItem="oKT-El-LfW" firstAttribute="top" secondItem="YjS-Z9-WIu" secondAttribute="top" constant="20" id="5hx-m3-4Y7"/>
                                     <constraint firstItem="pZK-a4-st8" firstAttribute="centerY" secondItem="GWz-Nq-zWg" secondAttribute="centerY" id="Abg-PC-8Oh"/>
                                     <constraint firstAttribute="bottom" secondItem="vhD-DL-itJ" secondAttribute="bottom" id="CSq-N3-kSx"/>
+                                    <constraint firstItem="9qM-Yr-Bgy" firstAttribute="top" secondItem="YjS-Z9-WIu" secondAttribute="top" constant="22" id="CpM-li-Wqk"/>
                                     <constraint firstItem="5Oc-7t-gHH" firstAttribute="centerY" secondItem="oKT-El-LfW" secondAttribute="centerY" id="Hec-cr-4C7"/>
                                     <constraint firstItem="oKT-El-LfW" firstAttribute="leading" secondItem="YjS-Z9-WIu" secondAttribute="leading" constant="35" id="MR6-kx-4gi"/>
                                     <constraint firstItem="SNc-Sl-VbW" firstAttribute="top" secondItem="YjS-Z9-WIu" secondAttribute="top" constant="25" id="MUt-IQ-Agb"/>
@@ -1353,6 +1422,7 @@
                                     <constraint firstAttribute="bottom" secondItem="qvx-yG-3EM" secondAttribute="bottom" constant="8" id="WFk-UE-feb"/>
                                     <constraint firstItem="GWz-Nq-zWg" firstAttribute="top" secondItem="5Oc-7t-gHH" secondAttribute="bottom" constant="50" id="YQe-gv-VNb"/>
                                     <constraint firstItem="1Tg-D7-1wx" firstAttribute="centerX" secondItem="YjS-Z9-WIu" secondAttribute="centerX" constant="80" id="YiA-IQ-ZdZ"/>
+                                    <constraint firstItem="9qM-Yr-Bgy" firstAttribute="leading" secondItem="YjS-Z9-WIu" secondAttribute="leading" constant="44" id="YyM-MS-uEc"/>
                                     <constraint firstAttribute="height" constant="220" id="gcw-Ca-foQ"/>
                                     <constraint firstItem="jdF-lM-s2p" firstAttribute="centerY" secondItem="GWz-Nq-zWg" secondAttribute="centerY" id="gvz-L1-4cC"/>
                                     <constraint firstItem="qvx-yG-3EM" firstAttribute="centerX" secondItem="YjS-Z9-WIu" secondAttribute="centerX" constant="-80" id="i9K-s3-Eme"/>
@@ -1908,7 +1978,7 @@
                     <navigationItem key="navigationItem" id="7x7-lz-GN4">
                         <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="OMH-nW-sqB">
                             <connections>
-                                <segue destination="IBD-yJ-Aak" kind="show" id="dtY-ka-x2a"/>
+                                <segue destination="IBD-yJ-Aak" kind="show" identifier="showNextSegue1" id="dtY-ka-x2a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2063,7 +2133,7 @@
                     <navigationItem key="navigationItem" id="Nzz-eZ-Khb">
                         <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="591-1H-OGP">
                             <connections>
-                                <segue destination="bYp-Zq-XVM" kind="show" id="YGa-HI-kCy"/>
+                                <segue destination="bYp-Zq-XVM" kind="show" identifier="showNextSegue2" id="YGa-HI-kCy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2073,7 +2143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7b-4y-X9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3107" y="-779"/>
+            <point key="canvasLocation" x="3126" y="-779"/>
         </scene>
         <!--Sign Up Flow Four View Controller-->
         <scene sceneID="OYT-gD-MED">
@@ -2175,7 +2245,7 @@ are you with DIYs?</string>
                     <navigationItem key="navigationItem" id="eZY-kz-qhD">
                         <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="bs6-4m-Z8T">
                             <connections>
-                                <segue destination="p2s-Bs-nLT" kind="push" id="gIL-Nd-Cw9"/>
+                                <segue destination="p2s-Bs-nLT" kind="push" identifier="showNextSegue3" id="gIL-Nd-Cw9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2316,10 +2386,10 @@ are you with DIYs?</string>
     <resources>
         <image name="big_circle" width="12" height="12"/>
         <image name="briefcase" catalog="system" width="128" height="102"/>
+        <image name="camera" catalog="system" width="128" height="96"/>
         <image name="color-wheel" width="512" height="512"/>
         <image name="doc.richtext" catalog="system" width="115" height="128"/>
         <image name="eraser" width="512" height="512"/>
-        <image name="filters" width="30" height="29.5"/>
         <image name="girl3" width="768" height="1152"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="graphpaper" width="1519" height="2018"/>

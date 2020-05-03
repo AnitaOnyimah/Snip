@@ -13,7 +13,7 @@ class SignUpFlowTwoViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let dataSource = [("Signup 1.3_Tie Dye.jpg","Tie Dye"), ("Signup 1.3_Embroidery.jpg","Embroidary"), ("Signup 1.3_Beddazling.jpg", "Beddazling"), ("Signup 1.3_Sewing.jpg", "Sewing"), ("Signup 1.3_Knitting.jpg", "Knitting"), ("Signup 1.3_Painting.jpg", "Painting")]
+    let dataSource = [("Signup 1.3_Tie Dye.jpg","Tie Dye"), ("Signup 1.3_Embroidery.jpg","Embroidery"), ("Signup 1.3_Beddazling.jpg", "Beddazling"), ("Signup 1.3_Sewing.jpg", "Sewing"), ("Signup 1.3_Knitting.jpg", "Knitting"), ("Signup 1.3_Painting.jpg", "Painting")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,5 +66,6 @@ extension SignUpFlowTwoViewController: UICollectionViewDataSource, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         FirebaseHelper.setDataInBio(for: "DIY Category", value: dataSource[indexPath.row].1)
+        self.performSegue(withIdentifier: "showNextSegue1", sender: nil)
     }
 }

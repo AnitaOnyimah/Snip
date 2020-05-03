@@ -66,5 +66,6 @@ extension SignUpFlowThreeViewController: UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         FirebaseHelper.setDataInBio(for: "DIY Item", value: dataSource[indexPath.row].1)
+        self.performSegue(withIdentifier: "showNextSegue2", sender: nil)
     }
 }

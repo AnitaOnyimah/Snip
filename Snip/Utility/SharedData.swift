@@ -32,6 +32,7 @@ class PostModel {
                  "extimatedTime": extimatedTime ?? "",
                  "difficultyLevel": difficultyLevel,
                  "tags": tags,
+                 "lastComment": "",
                  "popularInUserArea": popularInUserArea,
                  "price": price,
                  "forSale": forSale]

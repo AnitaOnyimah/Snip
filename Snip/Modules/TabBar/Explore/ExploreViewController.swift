@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import DrawerView
+import Firebase
+import FirebaseFirestore
 
 class ExploreViewController: BaseViewController {
     
@@ -116,6 +118,67 @@ class ExploreViewController: BaseViewController {
     }
     */
 
+    @IBAction func cameraAction(_ sender: Any) {
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .camera
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+}
+
+extension ExploreViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        //vision_images
+        
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        
+        guard let time = TimeFormatter.getCurrentLocalTimeStamp() else {
+            return
+        }
+        
+        self.showSpinner()
+        let imageName = time + ".png"
+        let storageRef = Storage.storage().reference().child("vision_images/\(imageName)")
+        
+        storageRef.putData(image.pngData()!, metadata: nil) { (metadata, error) in
+            print("Image Uploaded")
+            if error == nil {
+                Firestore.firestore().collection("images").document(imageName)
+                    .addSnapshotListener { documentSnapshot, error in
+                        self.hideSpinner()
+                        if let error = error {
+                            print("error occurred\(error)")
+                            self.showError(message: error.localizedDescription)
+                        } else {
+                            if (documentSnapshot?.exists)! {
+                                self.parseVisionResponse(data: documentSnapshot?.data())
+                            } else {
+                                print("waiting for Vision API data...")
+                                self.showError(message: "Parsing Error")
+                            }
+                        }
+                }
+            } else {
+                
+                self.showError(message: error!.localizedDescription)
+                self.hideSpinner()
+            }
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+    }
+    
+    func parseVisionResponse(data: [String: Any]?) {
+        guard let data = data else { return }
+        print(data)
+    }
 }
 
 extension ExploreViewController: UISearchBarDelegate {

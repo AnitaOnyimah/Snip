@@ -44,6 +44,7 @@
 		EBB2DB9F245C2581001A3A30 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DB9D245C2581001A3A30 /* ItemCollectionViewCell.swift */; };
 		EBB2DBA0245C2581001A3A30 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB2DB9E245C2581001A3A30 /* ItemCollectionViewCell.xib */; };
 		EBB2DBA2245C36DA001A3A30 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBA1245C36DA001A3A30 /* LocationManager.swift */; };
+		EBD6035F245F313200470D4B /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6035E245F313200470D4B /* FactsViewController.swift */; };
 		EBDBA909245BEDE100E0A6BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBA908245BEDE100E0A6BF /* AppDelegate.swift */; };
 		EBDBA90B245BEDE100E0A6BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBA90A245BEDE100E0A6BF /* SceneDelegate.swift */; };
 		EBDBA90D245BEDE100E0A6BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBA90C245BEDE100E0A6BF /* SignUpViewController.swift */; };
@@ -105,6 +106,7 @@
 		EBB2DB9D245C2581001A3A30 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		EBB2DB9E245C2581001A3A30 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		EBB2DBA1245C36DA001A3A30 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		EBD6035E245F313200470D4B /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
 		EBDBA905245BEDE100E0A6BF /* Snip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDBA908245BEDE100E0A6BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBDBA90A245BEDE100E0A6BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				EB690D8D245D6066001928EA /* InfoDIYViewController.swift */,
 				EB690D8F245D607A001928EA /* TagDIYViewController.swift */,
 				EB690D91245D6093001928EA /* PreviewPostViewController.swift */,
+				EBD6035E245F313200470D4B /* FactsViewController.swift */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 			files = (
 				EB5423C0245BFC1C00BEACE4 /* StudioViewController.swift in Sources */,
 				EBB2DB92245C192D001A3A30 /* SignUpFlowThreeViewController.swift in Sources */,
+				EBD6035F245F313200470D4B /* FactsViewController.swift in Sources */,
 				EB920CC1245DDB9E00F6851B /* HomeTableViewCell.swift in Sources */,
 				EBB2DB95245C197D001A3A30 /* SignUpFlowFourViewController.swift in Sources */,
 				EB690D8E245D6066001928EA /* InfoDIYViewController.swift in Sources */,

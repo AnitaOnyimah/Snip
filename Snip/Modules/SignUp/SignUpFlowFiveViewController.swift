@@ -27,6 +27,8 @@ class SignUpFlowFiveViewController: BaseViewController {
         let rand = arc4random()%9
         let fact = "Did you Know: \n" + facts[Int(rand)]
         factLabel.text = fact
+        
+        self.navigationItem.hidesBackButton = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
