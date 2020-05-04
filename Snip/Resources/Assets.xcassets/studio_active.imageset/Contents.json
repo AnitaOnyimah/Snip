@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "studio_active.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "studio_active@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

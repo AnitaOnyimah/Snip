@@ -93,7 +93,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="amit@gmail.com" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="line" translatesAutoresizingMaskIntoConstraints="NO" id="NBM-zU-2Ln">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="testest@gmail.com" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="line" translatesAutoresizingMaskIntoConstraints="NO" id="NBM-zU-2Ln">
                                 <rect key="frame" x="35" y="158" width="344" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="fsD-05-NYn"/>
@@ -222,7 +222,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dcN-gE-ckk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="nSK-Yt-zD7"/>
+                    <tabBarItem key="tabBarItem" title="" image="explore_active" id="nSK-Yt-zD7"/>
                     <navigationItem key="navigationItem" title="Explore" id="t2j-Wy-Nvv"/>
                     <connections>
                         <outlet property="mapView" destination="f9B-Jn-c2s" id="qHP-B5-XCZ"/>
@@ -360,7 +360,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Cs-ml-Foe"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="briefcase" catalog="system" id="dw6-gH-Wsg"/>
+                    <tabBarItem key="tabBarItem" title="" image="studio_active" id="dw6-gH-Wsg"/>
                     <navigationItem key="navigationItem" title="Creator Studio" id="K6R-Bq-cY3"/>
                     <connections>
                         <outlet property="collectionView" destination="shb-7S-ze8" id="rsu-6k-oyi"/>
@@ -376,7 +376,7 @@
         <scene sceneID="O2U-Ju-vaT">
             <objects>
                 <navigationController id="oMb-jk-lGt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="BhT-BK-f1P"/>
+                    <tabBarItem key="tabBarItem" title="" image="home_inactive" selectedImage="home_active" id="BhT-BK-f1P"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uea-Ib-Qfo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -417,7 +417,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yM7-hj-A3F"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="4Ya-uV-VSx"/>
+                    <tabBarItem key="tabBarItem" title="" image="home_active" id="4Ya-uV-VSx"/>
                     <navigationItem key="navigationItem" title="Home" id="atE-vb-hyO"/>
                     <connections>
                         <outlet property="tableView" destination="Jcz-Od-XYM" id="LbH-o8-9n3"/>
@@ -478,7 +478,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xma-7X-ay2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="doc.richtext" catalog="system" id="q7s-cu-Qm6"/>
+                    <tabBarItem key="tabBarItem" title="" image="upload" id="q7s-cu-Qm6"/>
                     <navigationItem key="navigationItem" title="Before Photo" id="gSD-ke-Bkm">
                         <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="6c8-1h-4Q0">
                             <connections>
@@ -597,7 +597,7 @@
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Process Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wor-kh-Wgj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Process Description: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wor-kh-Wgj">
                                 <rect key="frame" x="30" y="253" width="349" height="200"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1146,8 +1146,8 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amitabha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZB-9d-z8E">
-                                        <rect key="frame" x="66" y="25" width="85.5" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZB-9d-z8E">
+                                        <rect key="frame" x="66" y="25" width="46.5" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="twS-Ca-fUi"/>
                                         </constraints>
@@ -1245,8 +1245,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almost There !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shr-Np-NFe">
-                                <rect key="frame" x="119" y="208" width="176" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almost There!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shr-Np-NFe">
+                                <rect key="frame" x="123" y="208" width="168" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="EPc-Qu-cav"/>
                                 </constraints>
@@ -1313,7 +1313,7 @@
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         </preferredSymbolConfiguration>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amit Saha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oc-7t-gHH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anita Onyimah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oc-7t-gHH">
                                         <rect key="frame" x="160" y="57" width="239" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1328,8 +1328,8 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 follower" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdF-lM-s2p">
-                                        <rect key="frame" x="282.5" y="133.5" width="74" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdF-lM-s2p">
+                                        <rect key="frame" x="282.5" y="133.5" width="82" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Yaa-dK-MkB"/>
                                         </constraints>
@@ -1652,7 +1652,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RNZ-7A-erb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="person.crop.circle" catalog="system" id="G1T-3X-e2x"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile_active" id="G1T-3X-e2x"/>
                     <navigationItem key="navigationItem" title="Profile" id="iRk-NS-Cgm"/>
                     <connections>
                         <outlet property="centerConstarintSelectTab" destination="57a-Nm-J90" id="dfg-Em-gsc"/>
@@ -1994,7 +1994,7 @@
         <scene sceneID="XdY-BK-TvB">
             <objects>
                 <navigationController id="Ow4-DP-wYE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="1Xk-yD-C6o"/>
+                    <tabBarItem key="tabBarItem" title="" image="explore.inactive" selectedImage="explore_active" id="1Xk-yD-C6o"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yed-tI-SHl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2014,7 +2014,7 @@
         <scene sceneID="EN6-kE-ub6">
             <objects>
                 <navigationController id="91K-WX-gVU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="briefcase" catalog="system" id="h5L-lH-6yI"/>
+                    <tabBarItem key="tabBarItem" title="" image="studio_inactive" selectedImage="studio_active" id="h5L-lH-6yI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zn3-DE-RXl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2034,7 +2034,7 @@
         <scene sceneID="Ks4-HZ-pBW">
             <objects>
                 <navigationController id="OB3-2v-4Ob" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="doc.richtext" catalog="system" id="Auc-Ag-eua"/>
+                    <tabBarItem key="tabBarItem" title="" image="upload" selectedImage="upload" id="Auc-Ag-eua"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tmF-M8-Ud2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2058,7 +2058,7 @@
         <scene sceneID="yH5-Fk-JIw">
             <objects>
                 <navigationController id="kpR-gw-MAS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person.circle" catalog="system" id="KTU-6L-CSG"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile_inactive" selectedImage="profile_active" id="KTU-6L-CSG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tzw-Vt-cXN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2262,7 +2262,7 @@ are you with DIYs?</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almost There !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjs-RL-9HA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almost There!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjs-RL-9HA">
                                 <rect key="frame" x="50" y="148" width="314" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="L9D-vY-No0"/>
@@ -2385,28 +2385,32 @@ are you with DIYs?</string>
     </scenes>
     <resources>
         <image name="big_circle" width="12" height="12"/>
-        <image name="briefcase" catalog="system" width="128" height="102"/>
         <image name="camera" catalog="system" width="128" height="96"/>
         <image name="color-wheel" width="512" height="512"/>
-        <image name="doc.richtext" catalog="system" width="115" height="128"/>
         <image name="eraser" width="512" height="512"/>
+        <image name="explore.inactive" width="25" height="25"/>
+        <image name="explore_active" width="25" height="25"/>
         <image name="girl3" width="768" height="1152"/>
-        <image name="globe" catalog="system" width="128" height="121"/>
         <image name="graphpaper" width="1519" height="2018"/>
-        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="home_active" width="25" height="25"/>
+        <image name="home_inactive" width="25" height="25"/>
         <image name="line" width="1000" height="100"/>
         <image name="logoofficial" width="852" height="654"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="medium_circle" width="8" height="8"/>
         <image name="needleimage" width="768" height="510"/>
         <image name="pencil" width="512" height="512"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="profile_active" width="25" height="25"/>
+        <image name="profile_inactive" width="25" height="25"/>
         <image name="scissor" width="329" height="333"/>
         <image name="shirts" width="294" height="288"/>
         <image name="small_circle_selected" width="38" height="38"/>
         <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
+        <image name="studio_active" width="25" height="25"/>
+        <image name="studio_inactive" width="25" height="25"/>
+        <image name="upload" width="25" height="25"/>
         <image name="xpng" width="32" height="32"/>
         <namedColor name="color1">
             <color red="0.40000000596046448" green="0.58399999141693115" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

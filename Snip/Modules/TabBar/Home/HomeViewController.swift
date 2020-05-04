@@ -2,8 +2,8 @@
 //  HomeViewController.swift
 //  Snap
 //
-//  Created by Amitabha Saha on 01/05/20.
-//  Copyright © 2020 Amitabha. All rights reserved.
+//  Created by Anita Onyimah on 01/05/20.
+//  Copyright © 2020 Anita. All rights reserved.
 //
 
 import UIKit

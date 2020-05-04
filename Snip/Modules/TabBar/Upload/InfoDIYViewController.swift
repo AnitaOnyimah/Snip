@@ -2,8 +2,8 @@
 //  InfoDIYViewController.swift
 //  Snip
 //
-//  Created by Amitabha Saha on 02/05/20.
-//  Copyright © 2020 Amitabha. All rights reserved.
+//  Created by Anita Onyimah on 04/19/20.
+//  Copyright © 2020 Anitaa. All rights reserved.
 //
 
 import UIKit
